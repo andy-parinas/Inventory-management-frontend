@@ -1,0 +1,6 @@
+<ul class="menu">
+  <li class="menu__item" *ngFor="let menu of menus" >
+    <a  [routerLink]="menu.link" routerLinkActive="active"
+        class="menu__link" > {{ menu.name }} </a>
+  </li>
+</ul>

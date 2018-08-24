@@ -1,0 +1,13 @@
+.page-header {
+  background-color: #444444;
+  color: white;
+  display: flex;
+  align-items: center;
+
+  padding: 1rem 2rem;
+
+  &__icon{
+      fill: white;
+      margin: 0 1rem;
+  }
+}
