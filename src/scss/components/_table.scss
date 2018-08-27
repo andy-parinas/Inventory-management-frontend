@@ -1,0 +1,25 @@
+.table {
+  margin: 2rem 1rem;
+  table-layout:fixed;
+  width: 100%;
+  border-collapse: collapse;
+
+
+    &__row{
+
+    }
+
+    &__header{
+      border: 1px solid #000000;
+      padding: 8px;
+      padding: 5px 1rem;
+
+      text-align: left;
+      font-size: 1.3rem;
+      // font-weight: 500;
+      letter-spacing: 0.5px;
+      font-family: "Lato", sans-serif;
+      background-color:#c6c6c6;
+      // color: white;
+    }
+}

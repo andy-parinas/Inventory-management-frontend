@@ -10,6 +10,9 @@ import { InventoriesComponent } from './inventories/inventories.component';
 import { ProductsComponent } from './products/products.component';
 import { NavigationMenuComponent } from './common/navigation-header/navigation-menu/navigation-menu.component';
 import { InventoryListComponent } from './inventories/inventory-list/inventory-list.component';
+import { InventoryDetailComponent } from './inventories/inventory-detail/inventory-detail.component';
+import { InventoryListItemComponent } from './inventories/inventory-list/inventory-list-item/inventory-list-item.component';
+import { InventoryFormComponent } from './inventories/inventory-form/inventory-form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { InventoryListComponent } from './inventories/inventory-list/inventory-l
     InventoriesComponent,
     ProductsComponent,
     NavigationMenuComponent,
-    InventoryListComponent
+    InventoryListComponent,
+    InventoryDetailComponent,
+    InventoryListItemComponent,
+    InventoryFormComponent
   ],
   imports: [
     BrowserModule,
