@@ -1,3 +1,4 @@
+import { InventoryService } from './inventory.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

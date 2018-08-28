@@ -1,12 +1,28 @@
-.table {
-  margin: 2rem 1rem;
+.app-table {
+  // margin: 2rem auto;
   table-layout:fixed;
-  width: 100%;
+  width:100%;
   border-collapse: collapse;
 
 
     &__row{
+      &:hover{
+        background-color: #ff66243b;
+      }
 
+      &:nth-child(even){
+        background-color: #f2f2f2;
+        &:hover{
+          background-color: #ff66243b;
+        }
+      }
+    }
+
+    &__data{
+      padding: 5px 1rem;
+      font-size: 1.1rem;
+      font-family: "Lato", sans-serif;
+      border: 1px solid #333333;
     }
 
     &__header{
@@ -16,10 +32,8 @@
 
       text-align: left;
       font-size: 1.3rem;
-      // font-weight: 500;
       letter-spacing: 0.5px;
       font-family: "Lato", sans-serif;
       background-color:#c6c6c6;
-      // color: white;
     }
 }

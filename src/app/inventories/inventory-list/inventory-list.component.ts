@@ -1,3 +1,5 @@
+import { InventoryList } from './../../models/inventory-list.model';
+import { InventoryService } from './../inventory.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InventoryListComponent implements OnInit {
 
-  constructor() { }
+  inventories: InventoryList[];
+
+  constructor(private inventoryService: InventoryService) { }
 
   ngOnInit() {
+    this.inventories = this.inventoryService.getInventories();
+    console.log(this.inventories);
   }
 
+
+  onRowClick(index: number) {
+    console.log(index);
+  }
 }

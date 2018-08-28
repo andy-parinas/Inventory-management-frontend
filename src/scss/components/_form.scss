@@ -1,12 +1,11 @@
-.form-group {
+.app-form-group {
 
     display: flex;
     align-items: center;
     justify-content: center;
-    // margin: 2rem 0;
 }
 
-.form{
+.app-form{
 
     &__label {
       margin: 0 1rem;
@@ -37,7 +36,7 @@
 }
 
 
-.btn {
+.app-btn {
   //width: 10rem;
   font-size: 1.2rem;
   font-family: "Lato", sans-serif;
@@ -47,9 +46,9 @@
 
   background: transparent;
   padding: 5px 1rem;
-  border-radius: 5px;
-  border: 1px solid #dddddd;
-  background-color: #dddddd;
+  border-radius: 3px;
+  border: 1px solid rgb(51, 51, 51);;
+  background-color: #c6c6c6;
 
   transition: all 0.2s;
 
@@ -69,11 +68,20 @@
     animation: blink 1s;
   }
 
-  &__icon{
-    height: 1.5rem;
-    width: 1.5rem;
-    fill: currentColor;
+}
+
+
+@keyframes blink {
+  0% {
+    background-color: #777;
   }
 
+  50% {
+    background-color: #333333;
+  }
+
+  100% {
+    background-color: rgb(51, 51, 51);
+  }
 }
 

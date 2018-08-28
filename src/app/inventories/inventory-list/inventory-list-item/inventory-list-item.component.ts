@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { InventoryList } from './../../../models/inventory-list.model';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-inventory-list-item',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inventory-list-item.component.css']
 })
 export class InventoryListItemComponent implements OnInit {
+
+  @Input() inventory: InventoryList;
 
   constructor() { }
 

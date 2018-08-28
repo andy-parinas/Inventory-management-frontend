@@ -1,3 +1,4 @@
+import { InventoryService } from './inventories/inventory.service';
 import { AppRoutingModule } from './app-routing,module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -32,7 +33,7 @@ import { InventoryFormComponent } from './inventories/inventory-form/inventory-f
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [InventoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
