@@ -36,4 +36,18 @@
       font-family: "Lato", sans-serif;
       background-color:#c6c6c6;
     }
+
+    &__actions{
+      text-align: center;
+    }
+
+    &__link{
+      margin: 0 5px;
+      &:link,
+      &:visited{
+          text-decoration: none;
+      }
+
+
+    }
 }

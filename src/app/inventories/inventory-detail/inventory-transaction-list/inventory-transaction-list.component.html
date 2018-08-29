@@ -1,0 +1,40 @@
+<h4>Transaction History</h4>
+<table class="app-table">
+    <thead class="app-table__head">
+        <tr class="app-table__row">
+            <th class="app-table__header">Date</th>
+            <th class="app-table__header">Transaction</th>
+            <th class="app-table__header">Quantity</th>
+            <th class="app-table__header"></th>
+        </tr>
+    </thead>
+    <tbody class="app-table__body">
+        <tr class="app-table__row" *ngFor="let transaction of transactions" >
+            <td class="app-table__data"> {{ transaction.date }} </td>
+            <td class="app-table__data"> {{ transaction.transaction }} </td>
+            <td class="app-table__data"> {{ transaction.quantity }} </td>
+            <td class="app-table__data app-table__actions">
+                <a  class="app-table__link" [routerLink]="['transactions', transaction.id]"
+                    style="cursor: pointer;">View </a> |
+                <a class="app-table__link" style="cursor: pointer;" >Edit </a> |
+                <a class="app-table__link" style="cursor: pointer;" >Delete </a>
+              </td>
+        </tr>
+    </tbody>
+</table>
+<div class="app-row">
+    <div class="app-page__control">
+        <div class="app-group">
+          <button class="app-btn">Prev</button>
+          <button class="app-btn">Next</button>
+        </div>
+        <div class="app-group">
+          <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <span> OF 20</span>
+        </div>
+    </div>
+  </div>

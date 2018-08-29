@@ -2,7 +2,7 @@
     <div class="app-row">
         <div class="app-form-group">
               <label class="app-form__label" for="search">Search Inventories</label>
-              <input class="app-form__input" type="text">
+              <input class="app-form__input app-form__input--30" type="text">
               <button class="app-btn">Search</button>
               <button class="app-btn">Advance Search</button>
         </div>
@@ -16,11 +16,11 @@
                     <th class="app-table__header"> Quantity </th>
                     <th class="app-table__header"> Status </th>
                     <th class="app-table__header"> Location </th>
+                    <th class="app-table__header">  </th>
                 </tr>
             </thead>
             <tbody class="app-table__body" >
-                <tr class="app-table__row" *ngFor="let inventory of inventories"
-                    (click)="onRowClick(inventory.id)" style="cursor: pointer;" >
+                <tr class="app-table__row" *ngFor="let inventory of inventories" >
                     <td class="app-table__data">
                         {{ inventory.product }}
                       </td>
@@ -33,12 +33,18 @@
                       <td class="app-table__data">
                         {{ inventory.location }}
                       </td>
+                      <td class="app-table__data app-table__actions">
+                        <a  class="app-table__link"
+                            style="cursor: pointer;" [routerLink]="[inventory.id]" >View </a> |
+                        <a class="app-table__link" style="cursor: pointer;" >Edit </a> |
+                        <a class="app-table__link" style="cursor: pointer;" >Delete </a>
+                      </td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div class="app-row">
-      <div class="app-page__nav">
+      <div class="app-page__control">
           <div class="app-group">
             <button class="app-btn">Prev</button>
             <button class="app-btn">Next</button>

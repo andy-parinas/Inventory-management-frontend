@@ -1,3 +1,20 @@
-<p>
-  inventory-detail works!
-</p>
+<div class="app-container">
+    <div class="app-row">
+        <app-inventory-form></app-inventory-form>
+        <div class="app-page__control">
+            <div class="app-group">
+                <button class="app-btn">Add Transaction</button>
+                <button class="app-btn">Edit</button>
+              </div>
+              <div class="app-group">
+                  <button class="app-btn">Delete</button>
+              </div>
+        </div>
+    </div>
+
+    <div class="app-page__content">
+        <div class="app-row">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

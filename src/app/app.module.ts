@@ -1,3 +1,5 @@
+// tslint:disable-next-line:max-line-length
+import { InventoryTranctionListComponent } from './inventories/inventory-detail/inventory-transaction-list/inventory-transaction-list.component';
 import { InventoryService } from './inventories/inventory.service';
 import { AppRoutingModule } from './app-routing,module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,6 +16,8 @@ import { InventoryListComponent } from './inventories/inventory-list/inventory-l
 import { InventoryDetailComponent } from './inventories/inventory-detail/inventory-detail.component';
 import { InventoryListItemComponent } from './inventories/inventory-list/inventory-list-item/inventory-list-item.component';
 import { InventoryFormComponent } from './inventories/inventory-form/inventory-form.component';
+// tslint:disable-next-line:max-line-length
+import { InventoryTransactionDetailComponent } from './inventories/inventory-detail/inventory-transaction-detail/inventory-transaction-detail.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,9 @@ import { InventoryFormComponent } from './inventories/inventory-form/inventory-f
     InventoryListComponent,
     InventoryDetailComponent,
     InventoryListItemComponent,
-    InventoryFormComponent
+    InventoryFormComponent,
+    InventoryTranctionListComponent,
+    InventoryTransactionDetailComponent
   ],
   imports: [
     BrowserModule,
