@@ -1,4 +1,4 @@
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Inventory } from '../../models/inventory.model';
@@ -11,40 +11,59 @@ import { InventoryService } from '../inventory.service';
 })
 export class InventoryFormComponent implements OnInit {
 
+  @Input() formTitle = '';
   @Input() readOnly = false;
   @Input() newForm = false;
   @Input() inventory: Inventory;
 
-  disabled = true;
   inventoryForm: FormGroup;
 
-  constructor(private inventoryService: InventoryService, private router: Router) { }
+  constructor(private inventoryService: InventoryService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    console.log(this.readOnly);
     this.initForm();
   }
 
 
   initForm() {
-    console.log(this.inventory);
+
+    let product = '';
+    let quantity = 0;
+    let sku = '';
+    let status = '';
+    let thresholdCritical = 0;
+    let thresholdWarning = 0;
+    let location = '';
+
+    if (this.inventory !== undefined ) {
+        product = this.inventory.product.name;
+        quantity = this.inventory.quantity;
+        sku = this.inventory.sku;
+        status = this.inventory.status;
+        thresholdCritical = this.inventory.thresholdCritical;
+        thresholdWarning = this.inventory.thresholdWarning;
+        location = this.inventory.location;
+    }
+
     this.inventoryForm = new FormGroup({
-      'product': new FormControl(this.inventory.product.name, Validators.required),
-      'quantity': new FormControl(this.inventory.quantity, Validators.required),
-      'sku': new FormControl(this.inventory.sku, Validators.required),
-      'status': new FormControl(this.inventory.status, Validators.required),
-      'thresholdCritical': new FormControl(this.inventory.thresholdCritical, Validators.required),
-      'thresholdWarning': new FormControl(this.inventory.thresholdWarning, Validators.required),
-      'location': new FormControl(this.inventory.location, Validators.required)
+        'product': new FormControl(product, Validators.required),
+        'quantity': new FormControl(quantity, Validators.required),
+        'sku': new FormControl(sku, Validators.required),
+        'status': new FormControl(status, Validators.required),
+        'thresholdCritical': new FormControl(thresholdCritical, Validators.required),
+        'thresholdWarning': new FormControl(thresholdWarning, Validators.required),
+        'location': new FormControl(location, Validators.required)
     });
 
   }
 
   onCancel() {
-    this.inventoryService.changeEditModeTo(false);
-    // if (!this.newForm) {
-    //   this.router.navigate(['inventories', this.inventory.id]);
-    // }
-    this.initForm();
+      if (this.newForm) {
+        this.router.navigate(['../'], {relativeTo: this.route});
+      }
+      this.inventoryService.changeEditModeTo(false);
+      this.initForm();
   }
 
 }

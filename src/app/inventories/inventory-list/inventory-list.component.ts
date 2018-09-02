@@ -40,5 +40,9 @@ export class InventoryListComponent implements OnInit {
 
   }
 
+  onItemNew() {
+    this.router.navigate(['new'], {relativeTo: this.route});
+  }
+
 
 }

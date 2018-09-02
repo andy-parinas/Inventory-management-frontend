@@ -26,4 +26,15 @@ export class Inventory {
 
   }
 
+  constructor() {
+    this.id = 0;
+    this.sku = '';
+    this.quantity = 0;
+    this.product = new Product(0, '', '', '', 0, '');
+    this.thresholdWarning = 0;
+    this.thresholdCritical = 0;
+    this.status = '';
+    this.location = '';
+  }
+
 }
