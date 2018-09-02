@@ -1,21 +1,56 @@
 .app-page {
 
   &__content{
-    width: 90%;
-    // background-color: red;
+
     margin: 0 auto;
     padding: 20px 0;
+
+    &--80 {
+      width: 80%;
+    }
+
+    &--90 {
+      width: 90%;
+    }
 
   }
 
   &__control{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+
+    &--1x1 {
+
+    }
+
+    &--2x1 {
+      grid-template-columns: 2fr 1fr;
+    }
+
+    &--3x2 {
+      grid-template-columns: 3fr 2fr;
+    }
   }
 
 }
 
+.control-group{
+  display: flex;
+  align-items: center;
+
+  &--right {
+    justify-content: flex-end;
+  }
+
+}
+
+
+.app-group {
+  display: flex;
+  align-items: center;
+}
 
 .app-container {
 
@@ -23,5 +58,22 @@
 
 .app-row{
   margin: 10px 0;
+}
+
+.app-col {
+
+  margin: 0 auto;
+
+  &--60 {
+    width: 60%;
+  }
+
+  &--70 {
+    width: 70%;
+  }
+
+  &--80 {
+    width: 80%;
+  }
 }
 

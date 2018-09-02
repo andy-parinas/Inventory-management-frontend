@@ -1,3 +1,4 @@
+import { InventoryNewComponent } from './inventories/inventory-new/inventory-new.component';
 // tslint:disable-next-line:max-line-length
 import { InventoryTransactionDetailComponent } from './inventories/inventory-detail/inventory-transaction-detail/inventory-transaction-detail.component';
 // tslint:disable-next-line:max-line-length
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'inventories', component: InventoriesComponent, children: [
     {path: '', component: InventoryListComponent},
+    {path: 'new', component: InventoryNewComponent},
     {path: ':id', component: InventoryDetailComponent, children: [
       {path: '', component: InventoryTranctionListComponent},
       {path: 'transactions/:id', component: InventoryTransactionDetailComponent}

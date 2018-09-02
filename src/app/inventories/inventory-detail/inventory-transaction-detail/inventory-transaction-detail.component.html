@@ -1,3 +1,13 @@
-<p>
-  Inventory TransactionDetail
-</p>
+<div class="app-row">
+    <h4>Transaction Details</h4>
+    <app-transaction-form></app-transaction-form>
+    <div class="app-page__control">
+        <div class="control-group">
+            <button class="app-btn" (click)="onBackToList()" >Back to Transaction List</button>
+          </div>
+          <div class="control-group control-group--right">
+              <button class="app-btn">Edit</button>
+              <button class="app-btn">Delete</button>
+          </div>
+    </div>
+</div>

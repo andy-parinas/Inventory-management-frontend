@@ -1,38 +1,60 @@
-<div class="app-form-container">
-    <div class="app-form-row app-form-row--2">
-          <div class="app-form-row__col">
-                <label class="app-form__label app-form__label--right" for="product">Product</label>
-                <input class="app-form__input" type="text" placeholder="Product Name" >
-          </div>
-          <div class="app-form-row__col">
-                <label class="app-form__label app-form__label--right" for="product">Quantity</label>
-                <input class="app-form__input" type="text" placeholder="Quantity" >
+<form [formGroup]="inventoryForm" >
+    <div class="app-form-container">
+            <div class="app-form-row app-form-row--2">
+                  <div class="app-form-row__col app-form-row__col--1x2">
+                        <label  class="app-form__label app-form__label--right" for="product">Product</label>
+                        <input  class="app-form__input" type="text"
+                                placeholder="Product Name"
+                                formControlName="product" [readOnly]="readOnly" >
+                  </div>
+                  <div class="app-form-row__col app-form-row__col--1x2">
+                        <label  class="app-form__label app-form__label--right" for="product">Quantity</label>
+                        <input  class="app-form__input" type="text"
+                                placeholder="Quantity"
+                                formControlName="quantity" [readOnly]="readOnly" >
+                  </div>
+            </div>
+            <div class="app-form-row app-form-row--2">
+                  <div class="app-form-row__col app-form-row__col--1x2">
+                        <label  class="app-form__label app-form__label--right" for="product">SKU</label>
+                        <input  class="app-form__input" type="text"
+                                placeholder="SKU"
+                                formControlName="sku" [readOnly]="readOnly" >
+                  </div>
+                  <div class="app-form-row__col app-form-row__col--1x2">
+                        <label  class="app-form__label app-form__label--right" for="product">Status</label>
+                        <input  class="app-form__input" type="text"
+                                placeholder="Status"
+                                formControlName="status" [readOnly]="readOnly" >
+                  </div>
+            </div>
+            <div class="app-form-row app-form-row--2">
+                <div class="app-form-row__col app-form-row__col--1x2">
+                        <label  class="app-form__label app-form__label--right" for="product">Threshold Critical</label>
+                        <input  class="app-form__input" type="text"
+                                placeholder="Threshold Critical"
+                                formControlName="thresholdCritical" [readOnly]="readOnly" >
+                </div>
+                <div class="app-form-row__col app-form-row__col--1x2">
+                        <label  class="app-form__label app-form__label--right" for="product">Threshold Warning</label>
+                        <input  class="app-form__input" type="text"
+                                placeholder="Threshold Warning"
+                                formControlName="thresholdWarning" [readOnly]="readOnly" >
+                </div>
+            </div>
+            <div class="app-form-row app-form-row--2">
+                <div class="app-form-row__col app-form-row__col--1x2">
+                        <label  class="app-form__label app-form__label--right" for="product">Location</label>
+                        <input  class="app-form__input"
+                                type="text" placeholder="Location"
+                                formControlName="location" [readOnly]="readOnly" >
+                </div>
+            </div>
+    </div>
+    <div class="app-page__control">
+          <div class="app-group" *ngIf="!readOnly" >
+              <button type="button" class="app-btn">Save</button>
+              <button type="button" class="app-btn" (click)="onCancel()" >Cancel</button>
           </div>
     </div>
-    <div class="app-form-row app-form-row--2">
-          <div class="app-form-row__col">
-                <label class="app-form__label app-form__label--right" for="product">SKU</label>
-                <input class="app-form__input" type="text" placeholder="SKU" >
-          </div>
-          <div class="app-form-row__col">
-                <label class="app-form__label app-form__label--right" for="product">Status</label>
-                <input class="app-form__input" type="text" placeholder="Status" >
-          </div>
-    </div>
-    <div class="app-form-row app-form-row--2">
-        <div class="app-form-row__col">
-                <label class="app-form__label app-form__label--right" for="product">Threshold Critical</label>
-                <input class="app-form__input" type="text" placeholder="Threshold Critical" >
-        </div>
-        <div class="app-form-row__col">
-                <label class="app-form__label app-form__label--right" for="product">Threshold Warning</label>
-                <input class="app-form__input" type="text" placeholder="Threshold Warning" >
-        </div>
-    </div>
-    <div class="app-form-row app-form-row--2">
-        <div class="app-form-row__col">
-                <label class="app-form__label app-form__label--right" for="product">Location</label>
-                <input class="app-form__input" type="text" placeholder="Location" >
-        </div>
-    </div>
-</div>
+</form>

@@ -1,11 +1,18 @@
 <div class="app-container">
     <div class="app-row">
-        <div class="app-form-group">
-              <label class="app-form__label" for="search">Search Inventories</label>
-              <input class="app-form__input app-form__input--30" type="text">
-              <button class="app-btn">Search</button>
-              <button class="app-btn">Advance Search</button>
-        </div>
+        <div class="app-page__control app-page__control--3x2">
+            <div class="control-group" >
+                <label class="app-form__label" for="search">Search Inventories</label>
+                <input class="app-form__input app-form__input--flex" type="text">
+                <button class="app-btn">Search</button>
+                <button class="app-btn">Advance Search</button>
+            </div>
+            <div class="control-group control-group--right">
+                <button class="app-btn">New Inventory</button>
+                <button class="app-btn">Create Report</button>
+            </div>
+      </div>
+
     </div>
 
     <div class="app-row">
@@ -22,13 +29,13 @@
             <tbody class="app-table__body" >
                 <tr class="app-table__row" *ngFor="let inventory of inventories" >
                     <td class="app-table__data">
-                        {{ inventory.product }}
+                        {{ inventory.product.name }}
                       </td>
                       <td class="app-table__data">
                         {{ inventory.quantity | number }}
                       </td>
                       <td class="app-table__data">
-                        {{ inventory.status }}
+                        {{ inventory.status}}
                       </td>
                       <td class="app-table__data">
                         {{ inventory.location }}
@@ -36,7 +43,7 @@
                       <td class="app-table__data app-table__actions">
                         <a  class="app-table__link"
                             style="cursor: pointer;" [routerLink]="[inventory.id]" >View </a> |
-                        <a class="app-table__link" style="cursor: pointer;" >Edit </a> |
+                        <a class="app-table__link" (click)="onItemEdit(inventory.id)" style="cursor: pointer;" >Edit </a> |
                         <a class="app-table__link" style="cursor: pointer;" >Delete </a>
                       </td>
                 </tr>
@@ -45,17 +52,17 @@
     </div>
     <div class="app-row">
       <div class="app-page__control">
-          <div class="app-group">
+          <div class="control-group">
             <button class="app-btn">Prev</button>
             <button class="app-btn">Next</button>
           </div>
-          <div class="app-group">
+          <div class="control-group control-group--right">
             <select>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
             </select>
-            <span> OF 20</span>
+            <span> OF 20 </span>
           </div>
       </div>
     </div>
