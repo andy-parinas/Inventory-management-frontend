@@ -1,0 +1,42 @@
+
+    <h4>{{ formTitle }} </h4>
+    <div class="app-form-container">
+            <div class="app-form-row app-form-row--2">
+                  <div class="app-form-row__col app-form-row__col--1x2">
+                        <label  class="app-form__label app-form__label--right" for="product">Product</label>
+                        <input  class="app-form__input" type="text"
+                                placeholder="Product Name" >
+                  </div>
+                  <div class="app-form-row__col app-form-row__col--1x2">
+                        <label  class="app-form__label app-form__label--right" for="product">Price</label>
+                        <input  class="app-form__input" type="text"
+                                placeholder="Price" >
+                  </div>
+            </div>
+            <div class="app-form-row app-form-row--2">
+                  <div class="app-form-row__col app-form-row__col--1x2">
+                        <label  class="app-form__label app-form__label--right" for="product">UPC</label>
+                        <input  class="app-form__input" type="text"
+                                placeholder="UPC" >
+                  </div>
+                  <div class="app-form-row__col app-form-row__col--1x2">
+                        <label  class="app-form__label app-form__label--right" for="category">Category</label>
+                        <input  class="app-form__input" type="text"
+                                placeholder="Category" >
+                  </div>
+            </div>
+            <div class="app-form-row app-form-row--1">
+                <div class="app-form-row__col app-form-row__col--1x2x1x2">
+                      <label class="app-form__label app-form__label--right" for="descriptions">Descriptions</label>
+                      <textarea class="app-form__input app-form-row__col--2" rows="3"
+                                placeholder="Descriptions" ></textarea>
+                </div>
+            </div>
+    </div>
+    <div class="app-page__control">
+          <div class="app-group" *ngIf="!readOnly" >
+              <button type="button" class="app-btn">Save</button>
+              <button type="button" class="app-btn" >Cancel</button>
+          </div>
+    </div>
+

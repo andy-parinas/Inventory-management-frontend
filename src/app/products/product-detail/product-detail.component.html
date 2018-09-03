@@ -1,14 +1,14 @@
 <div class="app-container">
     <div class="app-row">
       <div class="app-col app-col--80">
-          <app-inventory-form [inventory]="inventory" [readOnly]="readOnly" [formTitle]="readOnly? 'Show Inventory' : 'Edit Inventory' " ></app-inventory-form>
-          <div class="app-page__control" *ngIf="readOnly" >
+          <app-product-form [readOnly]="true" ></app-product-form>
+          <div class="app-page__control"  >
               <div class="control-group">
-                  <button class="app-btn" (click)="onBackToList()" >Back To Inventory List</button>
+                  <button class="app-btn">Back To Product List</button>
                 </div>
                 <div class="control-group control-group--right">
-                    <button class="app-btn">Add Transaction</button>
-                    <button class="app-btn" (click)="onEditItem()" >Edit</button>
+                    <button class="app-btn">Add To Inventory</button>
+                    <button class="app-btn">Edit</button>
                     <button class="app-btn">Delete</button>
                 </div>
           </div>

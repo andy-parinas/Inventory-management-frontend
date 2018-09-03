@@ -1,0 +1,66 @@
+<div class="app-container">
+    <div class="app-row">
+        <div class="app-page__control app-page__control--3x2">
+            <div class="control-group" >
+                <label class="app-form__label" for="search">Search Products</label>
+                <input class="app-form__input app-form__input--flex" type="text">
+                <button class="app-btn">Search</button>
+                <button class="app-btn">Advance Search</button>
+            </div>
+            <div class="control-group control-group--right">
+                <button class="app-btn" >New Product</button>
+                <button class="app-btn">Create Report</button>
+            </div>
+      </div>
+
+    </div>
+
+    <div class="app-row">
+        <table class="app-table app-table--bordered">
+            <thead class="table__head" >
+                <tr class="table__row">
+                    <th class="app-table__header"> Product </th>
+                    <th class="app-table__header"> Category </th>
+                    <th class="app-table__header"> Price </th>
+                    <th class="app-table__header">  </th>
+                </tr>
+            </thead>
+            <tbody class="app-table__body" >
+                <tr class="app-table__row" *ngFor="let product of products" >
+                    <td class="app-table__data">
+                        {{ product.name }}
+                      </td>
+                      <td class="app-table__data">
+                        {{ product.category }}
+                      </td>
+                      <td class="app-table__data">
+                        {{ product.price }}
+                      </td>
+                      <td class="app-table__data app-table__actions">
+                        <a  class="app-table__link"
+                            style="cursor: pointer;" [routerLink]="[product.id]" >View </a> |
+                        <a class="app-table__link" style="cursor: pointer;" >Edit </a> |
+                        <a class="app-table__link" style="cursor: pointer;" >Delete </a>
+                      </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="app-row">
+      <div class="app-page__control">
+          <div class="control-group">
+            <button class="app-btn">Prev</button>
+            <button class="app-btn">Next</button>
+          </div>
+          <div class="control-group control-group--right">
+            <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <span> OF 20 </span>
+          </div>
+      </div>
+    </div>
+</div>
+

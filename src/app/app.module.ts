@@ -12,7 +12,6 @@ import { ProductsComponent } from './products/products.component';
 import { NavigationMenuComponent } from './common/navigation-header/navigation-menu/navigation-menu.component';
 import { InventoryListComponent } from './inventories/inventory-list/inventory-list.component';
 import { InventoryDetailComponent } from './inventories/inventory-detail/inventory-detail.component';
-import { InventoryListItemComponent } from './inventories/inventory-list/inventory-list-item/inventory-list-item.component';
 import { InventoryFormComponent } from './inventories/inventory-form/inventory-form.component';
 import { InventoryService } from './inventories/inventory.service';
 import { AppRoutingModule } from './app-routing,module';
@@ -22,6 +21,11 @@ import { InventoryTransactionDetailComponent } from './inventories/inventory-det
 import { InventoryTransactionFormComponent } from './inventories/inventory-detail/inventory-transaction-form/inventory-transaction-form.component';
 // tslint:disable-next-line:max-line-length
 import { InventoryTranctionListComponent } from './inventories/inventory-detail/inventory-transaction-list/inventory-transaction-list.component';
+import { ProductDetailComponent } from './products/product-detail/product-detail.component';
+import { ProductListComponent } from './products/product-list/product-list.component';
+import { ProductFormComponent } from './products/product-form/product-form.component';
+import { ProductNewComponent } from './products/product-new/product-new.component';
+import { ProductInventoryListComponent } from './products/product-detail/product-inventory-list/product-inventory-list.component';
 
 @NgModule({
   declarations: [
@@ -34,12 +38,17 @@ import { InventoryTranctionListComponent } from './inventories/inventory-detail/
     NavigationMenuComponent,
     InventoryListComponent,
     InventoryDetailComponent,
-    InventoryListItemComponent,
     InventoryFormComponent,
     InventoryTranctionListComponent,
     InventoryTransactionDetailComponent,
     InventoryTransactionFormComponent,
-    InventoryNewComponent
+    InventoryNewComponent,
+    ProductDetailComponent,
+    ProductListComponent,
+    ProductFormComponent,
+    ProductNewComponent,
+    ProductInventoryListComponent
+
   ],
   imports: [
     BrowserModule,
